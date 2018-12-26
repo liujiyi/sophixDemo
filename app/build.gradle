@@ -54,6 +54,7 @@ android {
         }
     }
 
+    //多渠道区别补丁包
     productFlavors {
         normal {
             versionCode 102
