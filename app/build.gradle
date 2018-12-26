@@ -15,16 +15,16 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("/Users/liudachuia/liudachui.jks")
-            storePassword "liudachuia"
-            keyAlias "liudachuia"
-            keyPassword "liudachuia"
+//            storeFile file("/Users/liudachuia/liudachui.jks")
+//            storePassword "liudachuia"
+//            keyAlias "liudachuia"
+//            keyPassword "liudachuia"
         }
         debug {
-            storeFile file("/Users/liudachuia/liudachui.jks")
-            storePassword "liudachuia"
-            keyAlias "liudachuia"
-            keyPassword "liudachuia"
+//            storeFile file("/Users/liudachuia/liudachui.jks")
+//            storePassword "liudachuia"
+//            keyAlias "liudachuia"
+//            keyPassword "liudachuia"
         }
     }
     buildTypes {
@@ -56,14 +56,14 @@ android {
 
     productFlavors {
         normal {
-            versionCode 1
-            versionName "1.0.1"
+            versionCode 102
+            versionName "1.0.2"
             buildConfigField 'String', 'channel', '\"narmal\"'
         }
 
         other {
-            versionCode 1
-            versionName "1.0.1.0"
+            versionCode 102
+            versionName "1.0.2"
             buildConfigField 'String', 'channel', '\"other\"'
 
         }

@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
         }
         ((TextView) findViewById(R.id.text)).setText("" + BuildConfig.channel + "\n" + appVersion);
+        ((TextView) findViewById(R.id.text)).setText("热更新后...");
 
         findViewById(R.id.text).setOnClickListener(new View.OnClickListener() {
             @Override

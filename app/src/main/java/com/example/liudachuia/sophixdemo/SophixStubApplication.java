@@ -37,6 +37,7 @@ public class SophixStubApplication extends SophixApplication {
 
     private void initSophix() {
         String appVersion = "0.0.0";
+        String channel = BuildConfig.channel;
         try {
             appVersion = this.getPackageManager()
                     .getPackageInfo(this.getPackageName(), 0)
@@ -45,7 +46,7 @@ public class SophixStubApplication extends SophixApplication {
         }
         final SophixManager instance = SophixManager.getInstance();
         instance.setContext(this)
-                .setAppVersion(appVersion)
+                .setAppVersion(appVersion + channel)
                 .setSecretMetaData("25443428", "0a49cae743763c61abb01ed7e0fe574b", "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCiK8vEQuwfUO1t2g0CGRamMubbLcdR/xeLdFUG/9tXHhMwd6cwpDKDtb3T4rZdtzsUNPtAZ+qmMmLzfsvrc4mSsy2n9OuoxbBhrCmh9aNS64MQzqNgFY2nlgwxvICmo7n9d75fCg2HFRBeoPLooZllO3Z4J9y804Kp8kLL6LJGLJsEWK369/DksTArDSgsVzxpOKplFL9GrXTFHDkEzxJ9tdVvqLrppHJ5gu1HOnkxedzua2zgK8kBT06zkj6weGFznJk7ttXc2q0zIShL0B/AzhcgRoFhe30TNzoZvID1tusIsQrNlqhUFd8C8zi12VRQYE6F16jEYyfhzZZ0TNDvAgMBAAECggEBAIKCiHwr92bEdC+B2hIkKqwaLtuZHd2JU2NxfbQiWFzl4T+SK8Tjf5uruVc6DtWgzjTW5pTQjHCwAB5Bns6frsmW1Vljq/upDOet69thmczzqAjwo16COfvyr2GfeFGjVdz8bwKBTp21f/UHxjUdSBvGHPNZ8TUtauxmAQek/0Ok/dx+7qNAQp1vmMTwBnAcxigrC1WedIqe7R4ZNXm2NazRoeNX8ZdVNUvzV5T2Y2bkOXbvSLwKcS8tULTUlS6nIv89kUuoZz2vkxpJx2gpKdaBPyJ0dui9z6/E0Jqgowft7TY8mKPGM6qiyrHsfxiVPuMKYEg5DpR8ul1/qepOByECgYEA1QmTeb0UfosVlgkWPEdYf7j7CBouIPsRSCUDBTx/MbNz9Fm9OGR+J8XpZeRP9ydDJu3fTxOoPEQWI2x58FYC8/nBjn77BRsPpCOCx0uJ6/jzfpMt8eJs5TBvr42ESF0+fYLSajosXFVJ6KCSPrwTD+XwtCJW/DkwL7PuHnBV+3cCgYEAwuAoaRvPcJ0kjm6wl7qJpujeh9sAggCIp040CUcpx1JrgwiIsPmC12EDh12ROZ/b04vqi03kON32+SgQJs7j+Fx8v8TZx0+gm/UkRKA+WUrm1Esa+xcB0OQgWsJ/qUTzdPLPQ/kRyQ3/JPLGKfSM1GrbYWljf6hpqHp5yMEHxEkCgYBK1G5E2LGWMWyHovF4gucHFga3Ndr2IrpTSQzijflvj8UvE0ZvxHy7o7zz2VptShFAX1WNBS6W3KOaFcRPMyceY6AlWVz60iKQWRjawCHWDUAaOcBtskblyjmwxFiuwnHszEL0pTJnzF2FpME53/4iG3aND3LWbZALcXw2nObWyQKBgAI+uNh1JI+kj85AQjKNSJauqhmgkUHuJaTfxsOwmS+dqHVq/MAlL7exe2vszQZ/6/Vk8D/Ilu98xyKZro3z5jZvQlSnPOcJ6MzDJzbPLcizjzM05kusOS4h4qmJAhV+INvhDDg5P1Y0nhLb5SKImbK8xGg74ZSP6R+ywYJpjuBZAoGBAKWPP1VtPcvZERlwFcAJpdH/6TYE2XH57uFJQ0z2WUFuipawr91aqDJkNw2ZU5iKstFVJA7iO4C5ERgOm+UK9XGXlkQd05awW5jQxkvsrivBQvgjC5885ERCf/UWRoqSeulH6+KiWsrhrFU/r9vqD4+w0QpZqwCgXVrsUAWPZbtz")
                 .setEnableDebug(true)
                 .setEnableFullLog()
